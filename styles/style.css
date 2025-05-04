@@ -59,7 +59,6 @@ ol {
   margin: auto;
   width: 1140px;
   gap: 30px;
-  /* align-self: center; */
 
 }
 
@@ -86,12 +85,12 @@ ol {
   height: 298px;
   overflow: scroll;
   position: relative;
+  overflow-x: hidden;
 }
 
 .result__video-container {
   height: 386px;
   width: 711px;
-  /* было так - margin-bottom: 22px; стало так */
   margin-block-end: 16px;
   object-fit: cover;
   position: relative;
@@ -101,9 +100,6 @@ ol {
   object-fit: cover;
   height: 386px;
   width: 100%;
-  /* object-position: center; */
-  /* inline-size: 100%;
-  block-size: 100%; */
 }
 
 .content__list {
@@ -112,11 +108,10 @@ ol {
   gap: 30px;
 }
 
-
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  /* gap: 6px; */
+  margin-bottom: 30px;
 }
 
 .content__video-card-thumbnail {
@@ -128,6 +123,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-width: 0;
   -webkit-line-clamp: 4;
   line-clamp: 4;
   gap: 2px;
@@ -165,11 +161,12 @@ ol {
 
 .content__video-card-title {
   font-family: Oswald;
-  /* font-weight: 700; */
   font-size: 30px;
   line-height: 100%;
-  /* letter-spacing: 0; */
   text-transform: uppercase;
+  /* свойства для длинных названий, чтобы многоточие появлялось */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -177,7 +174,6 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  /* letter-spacing: 0; */
 }
 
 .visually-hidden {
@@ -207,11 +203,7 @@ fieldset {
   display: flex;
   width: fit-content;
   font-family: 'Fira Sans Condensed';
-  
-  /* font-weight: 400; */
-  /* font-size: 18px; */
   line-height: 100%;
-  /* letter-spacing: 0; */
   gap: 5px;
   cursor: pointer;
 }
@@ -224,17 +216,13 @@ fieldset {
 
 .search-form__textfield {
   font-family: Fira Sans Condensed;
-  /* font-weight: 400; */
   font-size: 18px;
-  /* line-height: 100%; */
-  /* letter-spacing: 0; */
-  /* line-height: 22px; */
   font-style: normal;
   background-color: transparent;
   color: rgba(255, 255, 255, 1);
   border: none;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   appearance: none;
   width: 225px;
 }
@@ -258,8 +246,6 @@ fieldset {
   outline: 1px solid white;
   outline-offset: 2px;
 }
-
-
 
 .search-form__label-text:active,
 .search-form__textfield:active,
@@ -289,13 +275,12 @@ fieldset {
   width: 15px;
 }
 
-.search-form__pseudo-checkbox:active {
-  /* width: 17px;
-  height: 17px;
-  background: #fff;
-  border: 1px solid #1b1919;
-  outline: 1px solid #fff; */
-  /* надо настроить чтобы при active был белый фон, но не скакал */
+.search-form__pseudo-checkbox:active::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  /* display: block; */
 }
 
 .search-form__label:active .search-form__label-text {
@@ -317,15 +302,11 @@ fieldset {
 }
 
 .search-form__submit-button {
-  /* font-family: Fira Sans Condensed; */
-  /* letter-spacing: 0; */
   align-self: flex-end;
   min-width: 194px;
 }
 
 .more-button {
-  /* font-family: Fira Sans Condensed; */
-  /* letter-spacing: 0; */
   text-align: center;
   width: 100%;
 }
@@ -348,8 +329,7 @@ button:hover,
   outline: none;
 }
 
-
-
-
-
+.search-form__label:active .search-form__label-text {
+  text-decoration: none;
+}
 
