@@ -83,7 +83,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
 }
 
@@ -93,6 +93,7 @@ ol {
   height: 386px;
   margin-block-end: 16px;
   object-fit: cover;
+  object-position: center;
 }
 
 .result__video {
@@ -113,6 +114,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  flex-shrink: 0;
   width: 194px;
   height: 103px;
   object-fit: cover;
@@ -302,11 +304,14 @@ button:hover,
   background-color: #545050;
 }
 
-.button:active,
 .search-form__label-text:active,
 .search-form__textfield:active,
 .search-form__label:active {
   border: none;
+  text-decoration: none;
+}
+
+.search-form__label:active .search-form__label-text {
   text-decoration: none;
 }
 
