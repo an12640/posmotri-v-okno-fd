@@ -10,13 +10,13 @@ html {
 
 .page {
   display: flex;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -56,9 +56,9 @@ ol {
   grid-template-columns: 711px 399px;
   grid-template-areas: "result content__details";
   align-items: flex-end;
-  margin: auto;
-  width: 1140px;
   gap: 30px;
+  width: 1140px;
+  margin: auto;
 }
 
 .result {
@@ -67,44 +67,43 @@ ol {
 
 .content__details {
   display: grid;
-  gap: 26px;
   grid-area: content__details;
-  height: 100%;
+  gap: 26px;
   width: 100%;
+  height: 100%;
 }
 
 .search-form {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
   padding-bottom: 4px;
 }
 
 .content__list-container {
+  position: relative;
   height: 298px;
   overflow: scroll;
-  position: relative;
   overflow-x: hidden;
 }
 
 .result__video-container {
-  height: 386px;
+  position: relative;
   width: 711px;
+  height: 386px;
   margin-block-end: 16px;
   object-fit: cover;
-  position: relative;
 }
 
 .result__video {
-  object-fit: cover;
-  height: 386px;
   width: 100%;
+  height: 386px;
+  object-fit: cover;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
-  /* gap: 30px; */
 }
 
 .content__video-card {
@@ -121,77 +120,71 @@ ol {
 }
 
 .content__video-card-description-container {
-  flex-grow: 1;
-  min-width: 0;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  gap: 2px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+  min-width: 0;
 }
 
 .search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
 }
 
 .title {
-  font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
 }
 
 .content__accent {
-  color: rgba(84, 80, 80, 1);
+  color: #545050;
 }
 
 .content__card-link {
   display: block;
+  color: #fff;
   text-decoration: none;
-  color: white;
 }
 
 .content__card-link_current {
-  background: rgba(84, 80, 80, 1);
+  background: #545050;
 }
 
 .content__video-card-title {
-  font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
+  overflow: hidden;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 30px;
   line-height: 100%;
-  text-transform: uppercase;
   /* свойства для длинных названий, чтобы многоточие появлялось */
-  overflow: hidden;
+  text-transform: uppercase;
   text-overflow: ellipsis;
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4; 
 }
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
 }
 
 fieldset {
@@ -200,10 +193,10 @@ fieldset {
 
 .search-form__label {
   display: flex;
-  width: fit-content;
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
-  line-height: 100%;
   gap: 5px;
+  width: fit-content;
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
+  line-height: 100%;
   cursor: pointer;
 }
 
@@ -214,43 +207,21 @@ fieldset {
 }
 
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 1);
+  width: 225px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  color: #fff;
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  background-color: transparent;
   appearance: none;
-  width: 225px;
-}
-
-.button:focus,
-.search-form__textfield:focus,
-.search-form__checkbox:focus,
-.content__card-link:focus {
-  outline: none;
 }
 
 .content__list-item {
   padding-right: 3px;
   padding-left: 3px;
-}
-
-.button:focus-visible,
-.search-form__label:has(:focus-visible),
-.search-form__checkbox:has(:focus-visible),
-.content__card-link:focus-visible {
-  outline: 1px solid white;
-  outline-offset: 2px;
-}
-
-.search-form__label-text:active,
-.search-form__textfield:active,
-.search-form__label:active {
-  border: none;
-  text-decoration: none;
 }
 
 .search-form__checkbox-list {
@@ -269,9 +240,9 @@ fieldset {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
-  background: #fff;
-  height: 15px;
   width: 15px;
+  height: 15px;
+  background: #fff;
 }
 
 .search-form__pseudo-checkbox:active::after {
@@ -279,25 +250,19 @@ fieldset {
   width: 15px;
   height: 15px;
   background-color: #fff;
-  /* display: block; */
-}
-
-.search-form__label:active .search-form__label-text {
-  text-decoration: none;
-  background-color: none;
 }
 
 .button {
-  background-color: transparent;
-  border: 1px solid white;
-  color: white;
-  font-family: 'Fira Sans Condensed', 'Arial', 'Helvetica', sans-serif;
+  height: 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Fira Sans Condensed", "Arial", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   text-align: center;
+  background-color: transparent;
   cursor: pointer;
-  height: 34px;
 }
 
 .search-form__submit-button {
@@ -306,12 +271,14 @@ fieldset {
 }
 
 .more-button {
-  text-align: center;
-  width: 100%;
+    width: 98%;
+    margin-bottom: 4px;
+    margin-left: 3px;
+    padding: 0px;
+    text-align: center;
 }
 
 button:hover,
-.search-form__submit-button:hover,
 .more-button:hover,
 .content__card-link:hover,
 .search-form__label:hover .search-form__label-text {
@@ -319,15 +286,34 @@ button:hover,
   cursor: pointer;
 }
 
+.button:focus,
+.search-form__textfield:focus,
+.search-form__checkbox:focus,
+.content__card-link:focus {
+  outline: none;
+}
+
 .search-form__submit-button:active,
 .more-button:active,
 .content__video-card:active,
 .content__card-link:active {
-  background-color: rgba(84, 80, 80, 1);
-  text-decoration: none;
   outline: none;
+  text-decoration: none;
+  background-color: #545050;
 }
 
-.search-form__label:active .search-form__label-text {
+.button:active,
+.search-form__label-text:active,
+.search-form__textfield:active,
+.search-form__label:active {
+  border: none;
   text-decoration: none;
+}
+
+.button:focus-visible,
+.search-form__label:has(:focus-visible),
+.search-form__checkbox:has(:focus-visible),
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
